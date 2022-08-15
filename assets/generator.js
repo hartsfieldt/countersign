@@ -31,7 +31,6 @@ var generatePassword = function() {
     passwordLowerCase = window.confirm("Okay to confirm including lower case characters?");
     passwordNumber = window.confirm("Okay to confirm including numbers?");
     passwordSymbols = window.confirm("Okay to include symbols?");
-    console.log(passwordUpperCase)
 
     if (passwordUpperCase) {
     mainPasswordContainer += UpperCase;
