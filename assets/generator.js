@@ -5,13 +5,13 @@ var LowerCase = "abcdefghijklmnopqrstuvwxyz";
 var Number = "0123456789";
 var Symbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
-// I added these variable so that the special characters would return if they are not returned as true.
+// I added these variable so that the special characters would return a prompt if they are not returned as true.
 var passwordUpperCase = false;
 var passwordLowerCase = false;
 var passwordNumber = false;
 var passwordSymbols = false;
 
-
+// I created the variable generate password to create the window confirms to confirm the  password criteria the user would like for their password.
 var generatePassword = function() {
   var mainPasswordContainer = "";
   var block = "";
@@ -25,7 +25,7 @@ var generatePassword = function() {
       passwordLength = 0;
     }
   }
-
+// Here I created a while loop to execute their selections and to then execute a password.
   while (!passwordUpperCase && !passwordLowerCase && !passwordNumber && !passwordSymbols) {
     passwordUpperCase = window.confirm("Okay to confirm including upper case characters?");
     passwordLowerCase = window.confirm("Okay to confirm including lower case characters?");
@@ -52,7 +52,7 @@ var generatePassword = function() {
   if (!passwordUpperCase && !passwordLowerCase && !passwordNumber && !passwordSymbols)
   window.alert("Your password must include one or more character types.");
   }
-
+// Then finally here, the below lines 56 and 57 are to generate the password with-in the length limits.
   for (var i = 0; i < passwordLength; i++) {
     block += mainPasswordContainer [Math.floor(Math.random() * mainPasswordContainer.length)]
   }
@@ -62,7 +62,7 @@ var generatePassword = function() {
 
 
 
-// Get references to the #generate element **No need for edits**
+// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
