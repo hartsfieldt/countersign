@@ -3,7 +3,7 @@ var passwordLength = 0;
 var UpperCase = "ABCDEFGHIJKLMNOP";
 var LowerCase = "abcdefghijklmnopqrstuvwxyz";
 var Number = "0123456789";
-var Symbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+var Symbols = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
 // I added these variable so that the special characters would return if they are not returned as true.
 var passwordUpperCase = false;
@@ -13,6 +13,8 @@ var passwordSymbols = false;
 
 
 var generatePassword = function() {
+  var mainPasswordContainer = "";
+  var block = "";
   while (!passwordLength) {
     passwordLength = window.prompt("How many characters would you like your password to contain?");
 
@@ -28,17 +30,36 @@ var generatePassword = function() {
     passwordUpperCase = window.confirm("Okay to confirm including upper case characters?");
     passwordLowerCase = window.confirm("Okay to confirm including lower case characters?");
     passwordNumber = window.confirm("Okay to confirm including numbers?");
-    passwordSymbols = window.confirm("Okay to include symbols.");
+    passwordSymbols = window.confirm("Okay to include symbols?");
+    console.log(passwordUpperCase)
+
+    if (passwordUpperCase) {
+    mainPasswordContainer += UpperCase;
+  }
+
+    if (passwordLowerCase) {
+      mainPasswordContainer += LowerCase;
+    }
+
+    if (passwordNumber)  {
+      mainPasswordContainer += Number;
+    }
+
+    if (passwordSymbols) {
+      mainPasswordContainer += Symbols;
+    }
 
   if (!passwordUpperCase && !passwordLowerCase && !passwordNumber && !passwordSymbols)
   window.alert("Your password must include one or more character types.");
   }
+
+  for (var i = 0; i < passwordLength; i++) {
+    block += mainPasswordContainer [Math.floor(Math.random() * mainPasswordContainer.length)]
+  }
+
+  return block;
 };
 
-var writePassword = function () {
-  var array1 = [0,1,2,3,4,5,6,7,8,9];
-
-}
 
 
 // Get references to the #generate element **No need for edits**
