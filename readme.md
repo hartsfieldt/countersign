@@ -20,9 +20,15 @@ The employee must be presented with:
 
 ## Website
 
+https://hartsfieldt.github.io/countersign/
+
 ## Git Hub
 
+https://github.com/hartsfieldt/countersign
+
 ## Screencastify
+
+https://drive.google.com/file/d/1JADkhep0lhJa9DQtEeVoj1ZZ4DWMvsMa/view
 
 ## Contribution
 
