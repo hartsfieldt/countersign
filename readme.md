@@ -1,6 +1,6 @@
 # Password Generator
 
-<img src="./assets/images/" alt="screenshot of the website" height="300px"/>
+<img src="./assets/challenges_countersign" alt="screenshot of the website" height="300px"/>
 
 ## Purpose
 
